@@ -137,6 +137,12 @@ def test_landing_page():
         "<h1" in content and "<h2>" in content and "<h3>" in content
     )
 
+    # Font size requirement for "How to Participate" section
+    check_requirement(
+        "How to Participate heading has 35px font size",
+        "#participate h2" in content and "font-size: 2.1875rem" in content
+    )
+
     check_requirement(
         "Footer with attribution",
         "AI Work ecosystem" in content and "2025" in content
